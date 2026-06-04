@@ -202,6 +202,69 @@
         </section>
 
     </main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
+    document.querySelectorAll(".pillar-card").forEach((card, index) => {
+
+        card.addEventListener("click", () => {
+
+            const labels = [
+                "PHYSICS_LAB_01",
+                "NEURAL_SYNTH_02",
+                "SPATIAL_ORCH_03",
+                "ASSET_SYNTH_04"
+            ];
+
+            alert(labels[index] + " module opened.");
+
+        });
+
+    });
+
+    const calmButton = document.querySelector("button");
+
+    if (calmButton) {
+
+        calmButton.addEventListener("click", () => {
+
+            calmButton.innerHTML = `
+                <span class="material-symbols-outlined text-sm">
+                    check_circle
+                </span>
+                CALM_PROTOCOL_ACTIVE
+            `;
+
+            calmButton.classList.remove("bg-cyan-400");
+            calmButton.classList.add("bg-green-400");
+
+            navigator.vibrate?.(60);
+
+        });
+
+    }
+
+    const navItems = document.querySelectorAll("nav .haptic-target");
+
+    navItems.forEach((item) => {
+
+        item.addEventListener("click", () => {
+
+            navItems.forEach(nav => {
+                nav.classList.remove("text-cyan-400");
+                nav.classList.add("text-white/30");
+            });
+
+            item.classList.remove("text-white/30");
+            item.classList.add("text-cyan-400");
+
+            navigator.vibrate?.(30);
+
+        });
+
+    });
+
+});
+</script>
 </body>
 </html>
