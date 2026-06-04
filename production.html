@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Master Workspace Hub | V5.5 Haptic Refined</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@20..48,100..700,0..1,-25..0" />
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@20..48,100..700,0..1,-25..0" />
+
     <style>
+
         :root {
             --obsidian: #08090a;
             --cyan: #00f0ff;
             --orange: #ffb690;
             --purple: #a855f7;
         }
+
         body {
             background-color: var(--obsidian);
             color: #ffffff;
@@ -22,8 +29,15 @@
             overflow-x: hidden;
             width: 100%;
         }
-        .font-syne { font-family: 'Syne', sans-serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+        .font-syne {
+            font-family: 'Syne', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
         .glass-panel {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
@@ -31,20 +45,33 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 300ms ease-out;
         }
-        .glow-cyan { box-shadow: 0 0 15px rgba(0, 240, 255, 0.15); }
+
+        .glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+        }
+
         .text-gradient {
             background: linear-gradient(135deg, #ffdbca 0%, #ffb690 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .progress-bar {
             height: 4px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 2px;
             overflow: hidden;
         }
-        .progress-fill-cyan { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
-        .progress-fill-orange { background: #ffb690; box-shadow: 0 0 8px #ffb690; }
+
+        .progress-fill-cyan {
+            background: var(--cyan);
+            box-shadow: 0 0 8px var(--cyan);
+        }
+
+        .progress-fill-orange {
+            background: #ffb690;
+            box-shadow: 0 0 8px #ffb690;
+        }
 
         .material-symbols-outlined {
             display: inline-flex;
@@ -58,11 +85,14 @@
         }
 
         .haptic-target {
-            transition: transform 75ms cubic-bezier(0.4, 0, 0.2, 1), background-color 200ms ease;
+            transition: transform 75ms cubic-bezier(0.4, 0, 0.2, 1),
+                        background-color 200ms ease;
         }
+
         .haptic-target:active {
             transform: scale(0.97);
         }
+
         .pillar-card:hover {
             box-shadow: 0 0 20px rgba(168, 85, 247, 0.1);
             background: rgba(255, 255, 255, 0.05);
@@ -73,16 +103,27 @@
             user-select: none;
             z-index: 0;
         }
+
         main {
             position: relative;
             z-index: 10;
         }
+
         @media (max-width: 380px) {
-            .pillar-label { font-size: 8px !important; }
-            .pillar-card { padding: 12px !important; }
+
+            .pillar-label {
+                font-size: 8px !important;
+            }
+
+            .pillar-card {
+                padding: 12px !important;
+            }
+
         }
+
     </style>
 </head>
+
 <body class="pb-24 pt-16">
 
     <div class="fixed inset-0 bg-layer opacity-20"
@@ -94,25 +135,38 @@
     </div>
 
     <header class="fixed top-0 left-0 right-0 h-16 glass-panel border-b border-white/5 flex items-center justify-between px-6 z-50">
+
         <div class="flex items-center gap-3">
-            <span class="material-symbols-outlined text-cyan-400">grid_view</span>
+
+            <span class="material-symbols-outlined text-cyan-400">
+                grid_view
+            </span>
+
             <div>
                 <h1 class="font-syne text-xs font-bold tracking-tighter leading-tight">
                     CONVERGENCE_WORKSPACE
                 </h1>
+
                 <p class="font-mono text-[10px] text-white/40 uppercase">
                     V5.5 HARDENED
                 </p>
             </div>
+
         </div>
 
         <div class="flex items-center gap-4">
+
             <div class="text-right hidden xs:block">
-                <p class="text-[10px] font-mono text-cyan-400 uppercase">STATUS</p>
+
+                <p class="text-[10px] font-mono text-cyan-400 uppercase">
+                    STATUS
+                </p>
+
                 <p class="text-[10px] font-mono flex items-center justify-end gap-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
                     NOMINAL
                 </p>
+
             </div>
 
             <img
@@ -120,12 +174,15 @@
                 class="w-8 h-8 rounded-full border border-white/20"
                 alt="Avatar"
             >
+
         </div>
+
     </header>
 
     <main class="px-5 space-y-6 max-w-lg mx-auto w-full">
 
         <section class="glass-panel rounded-2xl p-6 glow-cyan">
+
             <p class="font-mono text-[10px] text-white/40 mb-2">
                 ID: SYNC_ENGINE_V5.5 // USER: lovechild82
             </p>
@@ -148,30 +205,54 @@
                 <div class="grid grid-cols-3 gap-2 border-t border-white/5 pt-4 text-center">
 
                     <div>
-                        <p class="text-[9px] font-mono text-white/40 uppercase">Encryption</p>
-                        <p class="text-xs font-mono text-orange-200">AES-4096</p>
+                        <p class="text-[9px] font-mono text-white/40 uppercase">
+                            Encryption
+                        </p>
+
+                        <p class="text-xs font-mono text-orange-200">
+                            AES-4096
+                        </p>
                     </div>
 
                     <div class="border-x border-white/5">
-                        <p class="text-[9px] font-mono text-white/40 uppercase">Latency</p>
-                        <p class="text-xs font-mono text-cyan-400">0.02ms</p>
+                        <p class="text-[9px] font-mono text-white/40 uppercase">
+                            Latency
+                        </p>
+
+                        <p class="text-xs font-mono text-cyan-400">
+                            0.02ms
+                        </p>
                     </div>
 
                     <div>
-                        <p class="text-[9px] font-mono text-white/40 uppercase">Uptime</p>
-                        <p class="text-xs font-mono">99.9%</p>
+                        <p class="text-[9px] font-mono text-white/40 uppercase">
+                            Uptime
+                        </p>
+
+                        <p class="text-xs font-mono">
+                            99.9%
+                        </p>
                     </div>
 
                 </div>
+
             </div>
+
         </section>
 
         <section class="grid grid-cols-2 gap-4 text-white">
 
             <div class="glass-panel rounded-xl p-4">
-                <p class="font-mono text-[9px] text-white/40 uppercase mb-1">NODE_CORE_01</p>
+
+                <p class="font-mono text-[9px] text-white/40 uppercase mb-1">
+                    NODE_CORE_01
+                </p>
+
                 <p class="font-syne text-lg">
-                    128 <span class="text-[10px] font-mono text-white/40">CORES</span>
+                    128
+                    <span class="text-[10px] font-mono text-white/40">
+                        CORES
+                    </span>
                 </p>
 
                 <div class="mt-3 progress-bar">
@@ -181,13 +262,20 @@
                 <p class="text-right text-[9px] font-mono mt-1 text-white/40 uppercase">
                     74%
                 </p>
+
             </div>
 
             <div class="glass-panel rounded-xl p-4">
-                <p class="font-mono text-[9px] text-white/40 uppercase mb-1">THERMAL_SENSE</p>
+
+                <p class="font-mono text-[9px] text-white/40 uppercase mb-1">
+                    THERMAL_SENSE
+                </p>
 
                 <p class="font-syne text-lg">
-                    42 <span class="text-[10px] font-mono text-white/40">°C</span>
+                    42
+                    <span class="text-[10px] font-mono text-white/40">
+                        °C
+                    </span>
                 </p>
 
                 <div class="mt-3 progress-bar">
@@ -197,74 +285,37 @@
                 <p class="text-right text-[9px] font-mono mt-1 text-cyan-400 uppercase font-bold">
                     STABLE
                 </p>
+
             </div>
 
         </section>
 
     </main>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
 
-    document.querySelectorAll(".pillar-card").forEach((card, index) => {
+    <script>
 
-        card.addEventListener("click", () => {
+        document.addEventListener("DOMContentLoaded", () => {
 
-            const labels = [
-                "PHYSICS_LAB_01",
-                "NEURAL_SYNTH_02",
-                "SPATIAL_ORCH_03",
-                "ASSET_SYNTH_04"
-            ];
+            document.querySelectorAll(".pillar-card").forEach((card, index) => {
 
-            alert(labels[index] + " module opened.");
+                card.addEventListener("click", () => {
 
-        });
+                    const labels = [
+                        "PHYSICS_LAB_01",
+                        "NEURAL_SYNTH_02",
+                        "SPATIAL_ORCH_03",
+                        "ASSET_SYNTH_04"
+                    ];
 
-    });
+                    alert(labels[index] + " module opened.");
 
-    const calmButton = document.querySelector("button");
+                });
 
-    if (calmButton) {
-
-        calmButton.addEventListener("click", () => {
-
-            calmButton.innerHTML = `
-                <span class="material-symbols-outlined text-sm">
-                    check_circle
-                </span>
-                CALM_PROTOCOL_ACTIVE
-            `;
-
-            calmButton.classList.remove("bg-cyan-400");
-            calmButton.classList.add("bg-green-400");
-
-            navigator.vibrate?.(60);
-
-        });
-
-    }
-
-    const navItems = document.querySelectorAll("nav .haptic-target");
-
-    navItems.forEach((item) => {
-
-        item.addEventListener("click", () => {
-
-            navItems.forEach(nav => {
-                nav.classList.remove("text-cyan-400");
-                nav.classList.add("text-white/30");
             });
 
-            item.classList.remove("text-white/30");
-            item.classList.add("text-cyan-400");
-
-            navigator.vibrate?.(30);
-
         });
 
-    });
+    </script>
 
-});
-</script>
 </body>
 </html>
